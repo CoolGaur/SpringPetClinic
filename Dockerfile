@@ -1,11 +1,13 @@
 # Use an official OpenJDK image as the base image for building
-FROM eclipse-temurin:17-jdk AS build
+FROM maven:3.9.8-eclipse-temurin-21 AS build
 
 # Set the working directory inside the container
 WORKDIR /app
 
 # Copy the Maven wrapper and project files
 COPY . .
+RUN mvn wrapper:wrapper
+
 
 # Give execute permissions to mvnw
 RUN chmod +x mvnw
