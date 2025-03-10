@@ -145,3 +145,5 @@ minikube service jenkins-svc --url
 
 # Jenkins password
 /var/jenkins_home/secrets/initialAdminPassword
+
+# Jenkins hook configured
