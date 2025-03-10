@@ -6,6 +6,8 @@ WORKDIR /app
 
 # Copy the Maven wrapper and project files
 COPY . .
+
+# Required to run ./mvnw
 RUN mvn wrapper:wrapper
 
 
